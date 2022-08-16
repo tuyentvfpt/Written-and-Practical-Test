@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main() {
+	float a,b,c;
+	printf("\nNhap ba canh tam giac:");
+	printf("\na = ");
+	scanf("%f",&a);
+	printf("\nb = ");
+	scanf("%f",&b);
+	printf("\nc = ");
+	scanf("%f",&c);
+	if (a>=b+c || b>=a+c || c>=a+b)
+		printf("\nBa canh vua nhap khong phai la ba canh tam giac");
+	else
+		{
+			float p = (a+b+c)/2;
+			float s = sqrt(p*(p-a)*(p-b)*(p-c));
+			printf("\nDien tich tam giac = %f",s);
+		}
+	return 0;
+}
